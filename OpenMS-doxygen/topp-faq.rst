@@ -46,7 +46,7 @@ is shown, you have probably moved your OpenMS installation manually?! Then the T
 
 Either of the following actions should fix your problem:
 
-* Set the environment variable OPENMS_DATA_PATH to your <OpenMS>/share/OpenMS/ folder.
+* Set the environment variable `OPENMS_DATA_PATH` to your `<OpenMS>/share/OpenMS/` folder.
 * [developers only] Use the cmake option `-D CMAKE_INSTALL_PREFIX=...` to set the installation directory. Run 'make OpenMS TOPP UTILS' again.
 * [developers only] Execute cmake in the new location and run 'make OpenMS TOPP UTILS' again.
 
