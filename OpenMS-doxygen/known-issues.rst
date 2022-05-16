@@ -55,6 +55,7 @@ Known issues on Linux
 * **Contrib fails to compile on Ubuntu 10.04**
 
   Your error message might look like:
+
   .. code:: bash
 
    gzip: stdin: invalid compressed data--crc error
