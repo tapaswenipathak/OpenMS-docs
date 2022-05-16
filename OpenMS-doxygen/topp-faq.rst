@@ -22,13 +22,13 @@ How to disable the OpenMS update check.
 
 Starting with OpenMS 2.1 all TOPP tools will check for updated versions of the tools online and will print an information message if a newer version is available. This version check occurs only once per day and tool. Information on which tools are executed will be collected anonymously to identify which tools are no longer used and to optimally distribute development resources. If the feature causes problems or concerns, it can be disabled at build or runtime:
 
-* Build time: disabling it in the build script (switch ENABLE_UPDATE_CHECK to "OFF" )
-* Runtime: setting the environment variable (OPENMS_DISABLE_UPDATE_CHECK to "ON")
+* Build time: disabling it in the build script (switch ``ENABLE_UPDATE_CHECK`` to "OFF" )
+* Runtime: setting the environment variable (``OPENMS_DISABLE_UPDATE_CHECK`` to "ON")
 
 How can I change the temporary directory that OpenMS uses?
 ##########################################################
 
-By default OpenMS will use the system wide temporary directory (defined either by TMPDIR, TEMP or TMP environmental variable). You can override this by setting the parameter "temp_dir" in the OpenMS.ini or setting the environmental variable OPENMS_TMPDIR.
+By default OpenMS will use the system wide temporary directory (defined either by TMPDIR, TEMP or TMP environmental variable). You can override this by setting the parameter ``temp_dir`` in the ``OpenMS.ini ``or setting the environmental variable ``OPENMS_TMPDIR``.
 
 Calling msConvert (of ProteoWizard) results in small mzML files with no peak data.
 
@@ -40,15 +40,17 @@ Some TOPP tools always crashes when executed. Other TOPP tools work properly.
 
 If a error message similar to
 
-`OpenMS::File::find(...) of File.cpp error message: the file 'CHEMISTRY/unimod.xml' could not be found`
+.. code:: bash
+
+ OpenMS::File::find(...) of File.cpp error message: the file 'CHEMISTRY/unimod.xml' could not be found
 
 is shown, you have probably moved your OpenMS installation manually?! Then the TOPP tools cannot find some required data files anymore, e.g. XML schema files or chemical isotope data.
 
 Either of the following actions should fix your problem:
 
-* Set the environment variable `OPENMS_DATA_PATH` to your `<OpenMS>/share/OpenMS/` folder.
-* [developers only] Use the cmake option `-D CMAKE_INSTALL_PREFIX=...` to set the installation directory. Run 'make OpenMS TOPP UTILS' again.
-* [developers only] Execute cmake in the new location and run 'make OpenMS TOPP UTILS' again.
+* Set the environment variable ``OPENMS_DATA_PATH`` to your ``<OpenMS>/share/OpenMS/`` folder.
+* [developers only] Use the ``cmake`` option ``-D CMAKE_INSTALL_PREFIX=...``` to set the installation directory. Run ``make OpenMS TOPP UTILS`` again.
+* [developers only] Execute ``cmake`` in the new location and run ``make OpenMS TOPP UTILS`` again.
 
 A TOPP tool crashes when loading a certain input file. Other files work properly.
 #################################################################################
@@ -56,8 +58,8 @@ If an XML input file is used, please check if the file is valid.
 
 For most XML data formats, this can be done using the FileInfo tool:
 
-`FileInfo -v -in <file>`
+``FileInfo -v -in <file>``
 
 You can also check for corrupt data in peak files:
 
-`FileInfo -c -in <file>`
+``FileInfo -c -in <file>``
