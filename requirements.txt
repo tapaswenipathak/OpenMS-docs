@@ -7,4 +7,4 @@ sphinx-notfound-page
 sphinxcontrib-images
 sphinx-inline-tabs
 pygments
-attr
+attrs
