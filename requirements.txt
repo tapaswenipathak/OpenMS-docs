@@ -2,7 +2,9 @@ sphinx
 readthedocs-sphinx-search
 furo
 sphinx-copybutton
-myst-parser==0.17.1
+myst-parser==0.17.2 \
+    --hash=sha256:1635ce3c18965a528d6de980f989ff64d6a1effb482e1f611b1bfb79e38f3d98 \
+    --hash=sha256:4c076d649e066f9f5c7c661bae2658be1ca06e76b002bb97f02a09398707686c
 sphinx-notfound-page
 sphinxcontrib-images
 sphinx-inline-tabs
