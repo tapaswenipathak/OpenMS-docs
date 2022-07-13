@@ -78,13 +78,22 @@ release = '2.8.0'
 #
 html_theme = 'furo'
 html_logo = 'assets/logo/OpenMS_transparent_background.png'
+html_favicon = 'assets/logo/OpenMS_transparent_background.png'
 html_theme_options = {
     "navigation_with_keys": True,
     "light_css_variables": {
         "font-stack--monospace": "Consolas, monospace",
         "font-size--small": "90%",
-        "toc-font-size": "87.5%"
+        "toc-font-size": "87.5%",
+        "color-announcement-background": "#bbbbbb",
+        "color-announcement-text": "#ffffff"
     },
+    "announcement": """
+    <a style=\"text-decoration: none;\"
+       href=\"https://abibuilder.informatik.uni-tuebingen.de/archive/openms/Documentation/release/latest/html/index.html\">
+       OpenMS API Reference Documentation
+    </a>
+    """,
 }
 pygments_style = 'sas'
 
