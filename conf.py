@@ -46,6 +46,7 @@ myst_enable_extensions = [
   "linkify_fuzzy_links",
 ]
 
+myst_heading_anchors = 3
 autosummary_generate = True
 autosummary_imported_members = True
 myst_all_links_external = True
